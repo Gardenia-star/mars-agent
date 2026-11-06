@@ -1,0 +1,36 @@
+# MARS-Agent 火眼检测系统依赖项
+# YOLOv10 Fire Detection System Requirements
+
+# 深度学习框架
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+
+# 图像处理
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# PyQt5界面
+PyQt5>=5.15.0
+PyQt5-sip>=12.11.0
+
+# Web界面 (Streamlit)
+# 注意：st.video 在 Streamlit 1.50 中移除了 use_container_width 参数（改用 width="stretch"），
+#       streamlit_app.py 已适配新版 API，因此要求 >=1.50.0
+streamlit>=1.50.0
+streamlit-webrtc>=0.45.0
+pandas>=1.4.0            # streamlit_app.py 直接 import（原清单遗漏）
+plotly>=5.0.0            # streamlit_app.py 直接 import（原清单遗漏）
+
+# 大模型支持
+#   方式A（推荐，无需本地部署）：任意 OpenAI 兼容的多模态 API，见 config/llm_api.json
+#   方式B：本地 Ollama（可选）
+requests>=2.28.0         # 云端多模态 API 调用（llm_api_client.py）
+ollama>=0.1.0            # 仅"本地 Ollama"后端需要
+
+# 绘图和可视化
+matplotlib>=3.7.0
+
+# 其他工具
+scipy>=1.11.0

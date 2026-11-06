@@ -1,0 +1,22 @@
+{
+  "_说明": [
+    "MARS-Agent 多模态大模型配置。改完直接重启程序即可生效，无需改代码。",
+    "API Key 建议写在项目根目录的 .env 文件里（格式 DASHSCOPE_API_KEY=sk-xxx），",
+    "那里的值优先级低于真实环境变量、高于本文件；本文件也支持 api_key 字段。",
+    "provider 可选: qwen | qwen-intl | deepseek | openai | zhipu | moonshot | siliconflow | ollama | custom",
+    "detail 留空表示不发送该字段（兼容性最好）；可填 low / high / original / auto。"
+  ],
+
+  "enabled": true,
+  "provider": "qwen",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "model": "qwen-vl-max",
+  "api_key": "",
+  "api_key_env": "DASHSCOPE_API_KEY",
+
+  "timeout": 180,
+  "max_tokens": 2048,
+  "temperature": 0.3,
+  "detail": "",
+  "system_prompt": "你是一名长期驻厂的资深铝电解工艺工程师。"
+}

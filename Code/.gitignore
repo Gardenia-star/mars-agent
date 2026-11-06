@@ -1,0 +1,18 @@
+# 含密钥，绝不入库
+.env
+.env.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 运行期产物
+qt_interface/history_record.json
+.streamlit/
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
